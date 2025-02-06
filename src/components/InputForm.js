@@ -46,29 +46,39 @@ const InputForm = ({ setIsInputActive, selectedDate, setData, data }) => {
     };
 
     return (
-        <div className='h-[250px] w-[400px] bg-orange-400 left-0 right-0 absolute mx-auto opacity-95 rounded-lg'>
+        <div className='h-[250px] w-[90%] sm:w-[400px] bg-orange-400 left-0 right-0 absolute mx-auto opacity-95 rounded-lg'>
             <div className='flex justify-center my-3'>
-                <h1 className='font-medium text-lg' >Add Todo Task</h1>
+                <h1 className='font-medium text-lg sm:text-xl md:text-2xl'>Add Todo Task</h1>
             </div>
-            <div className='flex justify-center my-6 '>
+
+            <div className='flex justify-center my-6'>
                 <div>
-                    <label className='text-lg'>Title </label>
-                    <input type="text" placeholder='Enter the title' className='rounded-md p-2'
+                    <label className='text-lg sm:text-xl'>Title</label>
+                    <input
+                        type="text"
+                        placeholder='Enter the title'
+                        className='rounded-md p-2 w-full sm:w-auto'
                         onChange={(e) => { setTitleInput(e.target.value) }}
                     />
                 </div>
             </div>
-            <div className='flex justify-center m-12'>
+
+            <div className='flex justify-center mt-6'>
                 <button
-                    className='border border-black p-1 bg-green-400 rounded-md mx-1'
+                    className='border border-black p-2 bg-green-400 rounded-md mx-1 text-sm sm:text-base'
                     onClick={(e) => { handleSubmitClick() }}
-                >Submit</button>
+                >
+                    Submit
+                </button>
                 <button
-                    className='border border-black p-1 bg-red-500 rounded-sm mx-1'
+                    className='border border-black p-2 bg-red-500 rounded-md mx-1 text-sm sm:text-base'
                     onClick={() => { setIsInputActive(false) }}
-                >Cancel</button>
+                >
+                    Cancel
+                </button>
             </div>
         </div>
+
     )
 }
 
