@@ -60,7 +60,6 @@ const CheckBox = ({ data, setData, selectedDate }) => {
     });
   };
 
-
   const handleDeleteTask = (index) => {
 
     setData((prev) => {
